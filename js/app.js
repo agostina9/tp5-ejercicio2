@@ -1,13 +1,36 @@
+let formulario = document.querySelector('#formulario');
+console.log(formulario);
+formulario.addEventListener('submit', crearPersona);
+
+function crearPersona(e){
+     e.preventDefault();
+    console.log('desde funcion persona');
+    let nombreIngresado = document.querySelector('#inputNombre').value;
+    console.log(nombreIngresado)
+    let edadIngresado = document.querySelector('#inputEdad').value;
+    console.log(edadIngresado)
+    let generoIngresado = document.querySelector('#inputGenero').value;
+    console.log(generoIngresado)
+    let pesoIngresado = document.querySelector('#inputPeso').value;
+    console.log(pesoIngresado);
+    let alturaIngresado = document.querySelector('#inputAltura').value;
+    console.log(alturaIngresado);
+    let nacimientoIngresado = document.querySelector('#inputNacimiento').value;
+    console.log(nacimientoIngresado);}
+
+
 class Persona {
     constructor(nombre, edad, sexo, peso, altura, fechaNacimiento) {
-      this.nombre = nombre;
-      this.edad = edad;
+      this.nombre = nombreIngresado;
+      this.edad = edadIngresado;
       this.dni = this.generaDNI();
-      this.sexo = sexo;
-      this.peso = peso;
-      this.altura = altura;
-      this.fechaNacimiento = fechaNacimiento;
+      this.sexo = generoIngresado;
+      this.peso = pesoIngresado;
+      this.altura = alturaIngresado;
+      this.fechaNacimiento = nacimientoIngresado;
     }
+    
+  
   
     mostrarDetalleGeneracion(generacion, marcoTemporal, historia, rasgo) {
       return `<ul>
@@ -93,14 +116,6 @@ class Persona {
     }
   }
   
-  let nombre = prompt("Ingrese un nombre");
-  let edad = prompt("Ingrese una edad");
-  let genero = prompt("Ingrese un genero : H(hombre), M(Mujer)");
-  let peso = prompt("Ingrese un peso en kg");
-  let altura = prompt("Ingrese una altura cm");
-  let anioNac = prompt("Ingrese el año de nacimiento");
-  let personaNueva = new Persona(nombre, edad, genero, peso, altura, anioNac);
-  
 //   document.write(personaNueva.mostrarDatos());
 //   document.write(
 //     `<p>La persona es mayor de edad: ${
@@ -108,3 +123,5 @@ class Persona {
 //     }</p>`
 //   );
 //   document.write(personaNueva.mostrarGeneracion());
+
+

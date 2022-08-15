@@ -15,7 +15,41 @@
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main class="container">
+        <h1 class="text-center my-4 text-primary">Generaciones</h1>
+        <hr>
+        <section >
+            <form id="formulario">
+                <div class="my-2">
+                    <input type="text" class="form-control" id="inputNombre" placeholder="Ingresar nombre" minlength="5" maxlength="40" required>
+                </div>
+                <div class="my-2">
+                    <input type="number" class="form-control" id="inputEdad" placeholder="Ingresar edad" minlength="1" maxlength="2" required>
+                </div>
+                <div class="my-2">
+                    <input type="text" class="form-control" id="inputGenero" placeholder="Ingresar genero" minlength="5" maxlength="10" required>
+                </div>
+                <div class="my-2">
+                    <input type="number" class="form-control" id="inputPeso" placeholder="Ingresar su peso en kg" minlength="2" maxlength="3" required>
+                </div>
+                <div class="my-2">
+                    <input type="number" class="form-control" id="inputAltura" placeholder="Ingresar su altura en cm" minlength="3" maxlength="4" required>
+                </div>
+                <div class="my-2">
+                    <input type="number" class="form-control" id="inputNacimiento" placeholder="Ingresar su año de nacimiento" minlength="4" maxlength="5" required>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button type='submit' class="btn btn-primary" onclick="crearPersona(e)">Confirmar</button>
+
+                </div>
+            </form>
+        </section>
+        <hr>
+        <section class="d-flex justify-content-center">
+            <div class="mx-3"><button type="button" class="btn btn-secondary" onclick="">Mostrar generacion</button></div>
+            <div><button type="button" class="btn btn-light">Mayor de edad</button></div>
+        </section>
+    </main>
     <footer></footer>
     <!-- JavaScript Bundle with Popper -->
     <script
